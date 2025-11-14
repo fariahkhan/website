@@ -156,3 +156,49 @@ body {
   margin-bottom: 12px;
   color: #374151;
 }
+
+/* Two-column layout for overview */
+.layout-two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.layout-two-column .col {
+  flex: 1 1 280px;
+}
+
+/* Make left column slightly wider on large screens */
+.layout-two-column .col-left {
+  flex: 1.2;
+}
+
+.layout-two-column .col-right {
+  flex: 1;
+}
+
+/* Tweak preview images inside the right column */
+.layout-two-column .preview-image-wrapper {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.layout-two-column .preview-image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Optional: smaller margin for secondary screenshot */
+.layout-two-column .preview-image-wrapper.secondary {
+  margin-top: 16px;
+}
+
+/* On very small screens, stack columns vertically */
+@media (max-width: 768px) {
+  .layout-two-column {
+    flex-direction: column;
+  }
+}
