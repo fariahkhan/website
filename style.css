@@ -66,3 +66,14 @@ body {
   padding: 20px;
   font-size: 0.9rem;
 }
+
+.preview-image-wrapper {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.preview-image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
