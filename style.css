@@ -4,18 +4,17 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  color: #111827; /* dark gray */
-  background: #f3f4f6; /* light gray background */
+  color: #111827;
+  background: #ffffff; /* full white, like most sites */
 }
 
+/* Page content width */
 .page {
   max-width: 960px;
-  margin: 40px auto;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
-  overflow: hidden;
+  margin: 24px auto 0 auto;
+  padding: 0 16px 32px;
 }
+
 
 /* Hero section */
 .hero {
