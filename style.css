@@ -122,6 +122,11 @@ body {
   transition: opacity 0.2s ease, border-bottom-color 0.2s ease;
 }
 
+.top-nav-links a.active {
+  opacity: 1;
+  border-bottom-color: #facc15; /* amber-ish highlight, if you prefer white, #ffffff; */
+}
+
 .top-nav-links a:hover {
   opacity: 1;
   border-bottom-color: #ffffff;
