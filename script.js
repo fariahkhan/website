@@ -34,6 +34,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ===== Scroll spy for top navigation =====
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.top-nav-links a[href^="#"]');
+
+  const idToLink = {};
+  navLinks.forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    idToLink[id] = link;
+  });
+
+  const sectionObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          // Remove active from all
+          navLinks.forEach(link => link.classList.remove('active'));
+          // Add active to the one matching the current section
+          const activeLink = idToLink[id];
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        }
+      });
+    },
+    {
+      threshold: 0.4
+    }
+  );
+
+  sections.forEach(section => sectionObserver.observe(section));
+
+
   // ===== Back-to-top button logic =====
   const backToTopBtn = document.querySelector('.back-to-top');
   if (backToTopBtn) {
