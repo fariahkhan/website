@@ -132,6 +132,12 @@ body {
   border-bottom-color: #ffffff;
 }
 
+/* optional for softer look */
+.about p,
+.contact p {
+  font-size: 0.96rem;
+}
+
 /* Stack nav on smaller screens */
 @media (max-width: 700px) {
   .top-nav {
