@@ -469,3 +469,39 @@ body {
 .back-to-top:hover {
   background: #1e40af;
 }
+
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 30px;
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  margin: 0 12px;
+  color: #1d4ed8;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* for pages view. privacy, terms and data-deletion */
+.small-page {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
